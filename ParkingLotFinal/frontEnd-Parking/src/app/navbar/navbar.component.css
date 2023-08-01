@@ -1,0 +1,31 @@
+* {
+  font-family: system-ui, -apple-system, Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.hero-section h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+#priceSection {
+  background-color: #fff;
+}
+
+.pricingHeader,
+.parkingSpots {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+#navBar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.bg-nav {
+  background-color: #182735;
+  color: #fff;
+}

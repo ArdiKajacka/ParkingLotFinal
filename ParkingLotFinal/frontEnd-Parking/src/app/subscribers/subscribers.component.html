@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="subscriber-container">
+        <input type="text" (input)="onSearchChange($event)"
+            placeholder="Search">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID Card</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Plate Number</th>
+                    <th>Is Deleted</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let subscriber of filteredSubscribers">
+                    <td>{{ subscriber.id }}</td>
+                    <td>{{ subscriber?.firstName }}</td>
+                    <td>{{ subscriber?.lastName }}</td>
+                    <td>{{ subscriber?.idCard }}</td>
+                    <td>{{ subscriber?.email }}</td>
+                    <td>{{ subscriber?.phone }}</td>
+                    <td>{{ subscriber?.plateNumber }}</td>
+                    <td>{{ subscriber?.isDeleted }}</td>
+                    <td>
+                        <button (click)="showUpdateForm(subscriber)"
+                            class="updatebutton">Update</button>
+                            <button (click)="onDelete(subscriber.idCard)" class="cancelbutton">Delete</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <button (click)="toggleCreateForm()" class="updatebutton">Create
+            Subscriber</button>
+        <div *ngIf="showCreateFormFlag">
+            <h2>Create New Subscriber</h2>
+            <div class="form-group">
+                <label>First Name:</label>
+                <input #firstNameInput type="text" required>
+            </div>
+            <div class="form-group">
+                <label>Last Name:</label>
+                <input #lastNameInput type="text" required>
+            </div>
+            <div class="form-group">
+                <label>ID Card:</label>
+                <input #idCardInput type="number" required>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input #emailInput type="email" required>
+            </div>
+            <div class="form-group">
+                <label>Phone:</label>
+                <input #phoneInput type="tel" required>
+            </div>
+            <div class="form-group">
+                <label>Plate Number:</label>
+                <input #plateNumberInput type="text" required>
+            </div>
+            <button (click)="onSubmitCreateForm(firstNameInput.value,
+                lastNameInput.value, idCardInput.value, emailInput.value,
+                phoneInput.value, plateNumberInput.value)" class="updatebutton">Create</button>
+            <button (click)="cancelCreateForm()" class="cancelbutton">Cancel</button>
+        </div>
+
+
+<div *ngIf="showUpdateFormFlag">
+    <h2>Update Subscriber</h2>
+    <div class="form-group">
+      <label>First Name:</label>
+      <input #updateFirstNameInput type="text" [value]="selectedSubscriber?.firstName" required>
+    </div>
+    <div class="form-group">
+      <label>Last Name:</label>
+      <input #updateLastNameInput type="text" [value]="selectedSubscriber?.lastName" required>
+    </div>
+    <div class="form-group">
+      <label>ID Card:</label>
+      <input #updateIdCardInput type="number" [value]="selectedSubscriber?.idCard" required>
+    </div>
+    <div class="form-group">
+      <label>Email:</label>
+      <input #updateEmailInput type="email" [value]="selectedSubscriber?.email" required>
+    </div>
+    <div class="form-group">
+      <label>Phone:</label>
+      <input #updatePhoneInput type="tel" [value]="selectedSubscriber?.phone" required>
+    </div>
+    <div class="form-group">
+      <label>Plate Number:</label>
+      <input #updatePlateNumberInput type="text" [value]="selectedSubscriber?.plateNumber" required>
+    </div>
+    <!-- Include idCardInput.value as a parameter -->
+    <button (click)="onSubmitUpdateForm(updateFirstNameInput.value, updateLastNameInput.value, updateIdCardInput.value, updateEmailInput.value, updatePhoneInput.value, updatePlateNumberInput.value, updateIdCardInput.value)" class="updatebutton">Update</button>
+    <button (click)="cancelUpdateForm()" class="cancelbutton">Cancel</button>
+  </div>
+  
+  <!-- More HTML code... -->
+  
+    </div>
+</div>

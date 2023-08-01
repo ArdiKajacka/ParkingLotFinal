@@ -1,0 +1,91 @@
+.subscribe-section {
+  background-image: url("Subscribe.jpg");
+  background: rgba(0, 0, 0, 0.65) url("Subscribe.jpg");
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.subscribe-section .content {
+  color: #fff;
+}
+
+.subscribe-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-right: 6rem;
+}
+
+.subscribe-section p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+}
+
+.subscribe-section .row {
+  justify-content: flex-start;
+}
+
+.subscribe-section .content {
+  text-align: left;
+}
+
+.subscribe-section .subscribe-button {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 2rem;
+}
+
+.subscribe-section .content {
+  margin-left: -6rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.subscribe-section .subscribe-button {
+  margin-right: -6rem;
+}
+.subscribe-section {
+  margin-top: 2rem;
+}
+
+.orange-btn {
+  background: #f77d24;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Sans-serif;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.orange-btn i {
+  display: inline-block;
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 15px;
+  margin-left: 15px;
+}
+
+/* Media query for screens with a maximum width of 768 pixels */
+@media (max-width: 768px) {
+  .subscribe-section h1 {
+    font-size: 2rem; /* Adjust the font size as needed for smaller screens */
+    margin-right: 3rem; /* Adjust the margin as needed for smaller screens */
+  }
+
+  .subscribe-section p {
+    font-size: 1rem; /* Adjust the font size as needed for smaller screens */
+    margin-right: 1.5rem; /* Adjust the margin as needed for smaller screens */
+  }
+
+  .subscribe-section .content {
+    margin-left: 0; /* Reset the left margin for smaller screens */
+  }
+
+  .subscribe-section .subscribe-button {
+    margin-right: 0; /* Reset the right margin for smaller screens */
+    margin-bottom: 1rem; /* Adjust the margin as needed for smaller screens */
+  }
+}

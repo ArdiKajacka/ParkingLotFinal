@@ -1,0 +1,39 @@
+<section id="LogIn">
+    <div class="card">
+      <h2>Subscribe</h2>
+      <form (ngSubmit)="submitSubscriberData()">
+        <div class="input-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required [(ngModel)]="firstName">
+        </div>
+        <div class="input-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required [(ngModel)]="lastName">
+        </div>
+        <div class="input-group">
+          <label for="cardNumber">Card Number:</label>
+          <input placeholder="9 numbers format eg. 123456789" type="text"
+            id="cardNumber" name="cardNumber" required [(ngModel)]="cardNumber">
+        </div>
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" placeholder="eg. eva1932@gmail.com"
+            id="email" name="email" required [(ngModel)]="email">
+        </div>
+        <div class="input-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" placeholder="9 numbers phone number"
+            id="phone" name="phone" required [(ngModel)]="phone">
+        </div>
+        <div class="input-group">
+          <label for="plateNumber">Plate Number:</label>
+          <input type="text" id="plateNumber" placeholder="eg. 1234"
+            name="plateNumber" required [(ngModel)]="plateNumber">
+        </div>
+        <div class="input-group">
+          <input id="submit-button" type="submit" value="Subscribe">
+        </div>
+      </form>
+    </div>
+  </section>
+  

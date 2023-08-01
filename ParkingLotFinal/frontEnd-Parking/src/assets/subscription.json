@@ -1,0 +1,119 @@
+{
+    "subscription": [
+      {
+        "id": 0,
+        "code": 0,
+        "subscriberId": 0,
+        "subscriber": {
+          "firstName": "John",
+          "lastName": "Doe",
+          "idCard": 123456789,
+          "email": "johndoe@example.com",
+          "phone": 987654321,
+          "plateNumber": 1234,
+          "isDeleted": true
+        },
+        "price": 0,
+        "discountValue": 0,
+        "startTime": "2023-07-17T08:06:57.118Z",
+        "endTime": "2023-07-17T08:06:57.118Z",
+        "isDeleted": true
+      },
+      {
+        "id": 1,
+        "code": 1,
+        "subscriberId": 1,
+        "subscriber": {
+          "firstName": "Alice",
+          "lastName": "Smith",
+          "idCard": 987654321,
+          "email": "alicesmith@example.com",
+          "phone": 123456789,
+          "plateNumber": 5678,
+          "isDeleted": true
+        },
+        "price": 0,
+        "discountValue": 0,
+        "startTime": "2023-07-18T08:06:57.118Z",
+        "endTime": "2023-07-18T08:06:57.118Z",
+        "isDeleted": true
+      },
+      {
+        "id": 2,
+        "code": 2,
+        "subscriberId": 2,
+        "subscriber": {
+          "firstName": "Emma",
+          "lastName": "Johnson",
+          "idCard": 111111111,
+          "email": "emmajohnson@example.com",
+          "phone": 222222222,
+          "plateNumber": 9102,
+          "isDeleted": true
+        },
+        "price": 0,
+        "discountValue": 0,
+        "startTime": "2023-07-19T08:06:57.118Z",
+        "endTime": "2023-07-19T08:06:57.118Z",
+        "isDeleted": true
+      },
+      {
+        "id": 3,
+        "code": 3,
+        "subscriberId": 3,
+        "subscriber": {
+          "firstName": "Michael",
+          "lastName": "Brown",
+          "idCard": 333333333,
+          "email": "michaelbrown@example.com",
+          "phone": 444444444,
+          "plateNumber": 2468,
+          "isDeleted": true
+        },
+        "price": 0,
+        "discountValue": 0,
+        "startTime": "2023-07-20T08:06:57.118Z",
+        "endTime": "2023-07-20T08:06:57.118Z",
+        "isDeleted": true
+      },
+      {
+        "id": 4,
+        "code": 4,
+        "subscriberId": 4,
+        "subscriber": {
+          "firstName": "Olivia",
+          "lastName": "Davis",
+          "idCard": 555555555,
+          "email": "oliviadavis@example.com",
+          "phone": 666666666,
+          "plateNumber": 1357,
+          "isDeleted": true
+        },
+        "price": 0,
+        "discountValue": 0,
+        "startTime": "2023-07-21T08:06:57.118Z",
+        "endTime": "2023-07-21T08:06:57.118Z",
+        "isDeleted": true
+      },
+      {
+        "id": 5,
+        "code": 5,
+        "subscriberId": 5,
+        "subscriber": {
+          "firstName": "William",
+          "lastName": "Wilson",
+          "idCard": 777777777,
+          "email": "williamwilson@example.com",
+          "phone": 888888888,
+          "plateNumber": 7890,
+          "isDeleted": true
+        },
+        "price": 0,
+        "discountValue": 0,
+        "startTime": "2023-07-22T08:06:57.118Z",
+        "endTime": "2023-07-22T08:06:57.118Z",
+        "isDeleted": true
+      }
+    ]
+  }
+  

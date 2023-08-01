@@ -1,0 +1,30 @@
+{
+    "complaints": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "phone": "987654321",
+        "email": "johndoe@example.com",
+        "complaintType": "Damage to Car",
+        "complaintDetails": "Scratch on the back"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "phone": "123456789",
+        "email": "janesmith@example.com",
+        "complaintType": "Spot Reservation Problems",
+        "complaintDetails": "Unable to reserve spot"
+
+      },
+      {
+        "firstName": "Alex",
+        "lastName": "Johnson",
+        "phone": "555555555",
+        "email": "alexjohnson@example.com",
+        "complaintType": "Other",
+        "complaintDetails": "Billing discrepancy"
+      }
+    ]
+  }
+  

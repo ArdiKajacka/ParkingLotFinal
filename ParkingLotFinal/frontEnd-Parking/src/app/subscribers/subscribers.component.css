@@ -1,0 +1,82 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid black;
+    background-color: #b4b4b4;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  #search {
+    margin-left: 45%;
+    margin-bottom: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .subscriber-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .toggleinput {
+    display: inline;
+  }
+  
+  .toggleinput input {
+    margin-left: 20px;
+  }
+  
+  .toggleinput label {
+    margin: 15px 0px;
+  }
+  
+  .updatebutton {
+    background-color: #38ef7d;
+    color: black;
+    font-weight: 500;
+    border-radius: 2px;
+    border: 0.5px solid black;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .cancelbutton {
+    background-color: #dd1b21;
+    color: black;
+    font-weight: 500;
+    border-radius: 2px;
+    border: 0.5px solid black;
+  }
+  
+  .update-form {
+    padding: 10px;
+  }
+  
+  .form-group {
+    display: inline-block;
+    margin-right: 20px; /* Add margin between label and input */
+  }
+  
+  .form-group label {
+    width: 120px;
+  }
+  

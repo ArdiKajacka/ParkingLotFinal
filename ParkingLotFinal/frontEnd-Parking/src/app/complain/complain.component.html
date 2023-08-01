@@ -1,0 +1,44 @@
+<section id="Complain">
+    <div class="card">
+        <h2>Complaint Form</h2>
+        <form (ngSubmit)="onSubmit()" id="complaints">
+            <div class="input-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="input-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="complaintType">Complaint Type:</label>
+                <select id="complaintType" name="complaintType" required>
+                    <option value="" selected disabled>Select complaint type</option>
+                    <option value="damage">Damage to Car</option>
+                    <option value="reservation">Spot Reservation Problems</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="complaintDetails">Complaint Details:</label>
+                <br>
+                <textarea id="complaintDetails" name="complaintDetails" rows="4"
+                    required></textarea>
+            </div>
+
+            <div class="input-group">
+                <input id="complain-submit-button" type="Submit" value="Sumbit">
+            </div>
+
+        </form>
+    </div>
+
+</section>

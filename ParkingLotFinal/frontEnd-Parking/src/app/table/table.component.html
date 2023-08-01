@@ -1,0 +1,96 @@
+<router-outlet></router-outlet>
+<div class="container">
+  <!-- Dropdown button to select the table -->
+  <div>
+    <button class="dropbtn" (click)="toggleDropdownAndButtons()">Select Table</button>
+    <div [ngClass]="{'dropdown-content': true, 'show': showDropdown}">
+      <a (click)="selectTable('subscribers')">Subscriber</a>
+      <!-- Add other table options here -->
+    </div>
+  </div>
+
+  <div *ngIf="selectedTable === 'subscribers'">
+    <label>Search:</label>
+    <input type="text" [(ngModel)]="searchText">
+    <button (click)="search()">Search</button>
+    <button (click)="refreshTable()">Refresh</button>
+  </div>
+
+  <!-- Table for Subscribers -->
+  <table *ngIf="selectedTable === 'subscribers'" class="responsive-table">
+    <thead>
+      <tr>
+        <th>ID Card</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Plate Number</th>
+        <th>Is Deleted</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let subscriber of subscribersData">
+        <td>{{ subscriber.idCard }}</td>
+        <td>{{ subscriber.firstName }}</td>
+        <td>{{ subscriber.lastName }}</td>
+        <td>{{ subscriber.email }}</td>
+        <td>{{ subscriber.phone }}</td>
+        <td>{{ subscriber.plateNumber }}</td>
+        <td>{{ subscriber.isDeleted }}</td>
+        <td>
+          <button (click)="deleteSubscriber(subscriber.idCard)">Delete</button>
+          <button (click)="updateSubscriber(subscriber.idCard)">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <!-- Button to toggle the form for adding a subscriber -->
+    <button (click)="toggleAddForm('add')">Add Subscriber</button>
+  </div>
+
+  <!-- Form for adding/updating subscribers -->
+  <!-- <form [formGroup]="showAddFormType === 'add' ? subscriberForm : updateForm" *ngIf="showAddForm" (submit)="onFormSubmit()">
+     Fields for adding subscribers 
+    <div *ngIf="showAddFormType === 'add'">
+    <label>idCard:</label>
+    <input type="text" formControlName="idCard" required>
+    <label>First Name:</label>
+      <input type="text" formControlName="firstName" required><br>
+      <label>Last Name:</label>
+      <input type="text" formControlName="lastName" required><br>
+      <label>Email:</label>
+      <input type="email" formControlName="email" required><br>
+      <label>Phone:</label>
+      <input type="text" formControlName="phone" required><br>
+      <label>Plate Number:</label>
+      <input type="text" formControlName="plateNumber" required><br>
+      <label>Is Deleted:</label>
+      <input type="checkbox" formControlName="isDeleted"><br>
+    </div>
+
+    <div *ngIf="showAddFormType === 'update'">
+      <label>ID Card:</label>
+      <input type="text" formControlName="idCard" readonly><br>
+      <label>First Name:</label>
+      <input type="text" formControlName="firstName" required><br>
+      <label>Last Name:</label>
+      <input type="text" formControlName="lastName" required><br>
+      <label>Email:</label>
+      <input type="email" formControlName="email" required><br>
+      <label>Phone:</label>
+      <input type="text" formControlName="phone" required><br>
+      <label>Plate Number:</label>
+      <input type="text" formControlName="plateNumber" required><br>
+      <label>Is Deleted:</label>
+      <input type="checkbox" formControlName="isDeleted"><br>
+    </div>
+
+    <button type="submit">{{ showAddFormType === 'update' ? 'Update' : 'Add' }} Subscriber</button>
+    <button type="button" (click)="cancelAdd()">Cancel</button>
+  </form>
+</div>
+-->

@@ -1,0 +1,101 @@
+<div class="pricing-container">
+    <div class="day-pricing">
+        <h2>Weekday</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Hourly Pricing</th>
+                    <th>Daily Pricing</th>
+                    <th>Minimum Hours</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Table Body -->
+            <tbody>
+                <tr *ngFor="let item of weekdayData">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.hourlyPricing }}</td>
+                    <td>{{ item.dailyPricing }}</td>
+                    <td>{{ item.minimumHours }}</td>
+                    <td>
+                        <button (click)="showWeekdayUpdateForm(item)"
+                            class="updatebutton">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Weekday Update Form -->
+        <div *ngIf="showWeekdayUpdateFormFlag" class="toggleinput">
+            <h2>Update Weekday</h2>
+            <div class="form-group">
+                <label for="hourlyPricingInput">Hourly Pricing:</label>
+                <input type="number" id="hourlyPricingInput" #hourlyPricingInput
+                    required />
+            </div>
+            <div class="form-group">
+                <label for="dailyPricingInput">Daily Pricing:</label>
+                <input type="number" id="dailyPricingInput" #dailyPricingInput
+                    required />
+            </div>
+            <div class="form-group">
+                <label for="minimumHoursInput">Minimum Hours:</label>
+                <input type="number" id="minimumHoursInput" #minimumHoursInput
+                    required />
+            </div>
+            <button (click)="onUpdateWeekday(hourlyPricingInput,
+                dailyPricingInput, minimumHoursInput)" class="updatebutton">Update</button>
+            <button (click)="onCancelWeekdayUpdate()" class="cancelbutton">Cancel</button>
+        </div>
+    </div>
+
+    <div class="day-pricing">
+        <h2>Weekend</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Hourly Pricing</th>
+                    <th>Daily Pricing</th>
+                    <th>Minimum Hours</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Table Body -->
+            <tbody>
+                <tr *ngFor="let item of weekendData">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.hourlyPricing }}</td>
+                    <td>{{ item.dailyPricing }}</td>
+                    <td>{{ item.minimumHours }}</td>
+                    <td>
+                        <button (click)="showWeekendUpdateForm(item)"
+                            class="updatebutton">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div *ngIf="showWeekendUpdateFormFlag" class="toggleinput">
+            <h2>Update Weekend</h2>
+            <div class="form-group">
+                <label for="hourlyPricingWeekendInput">Hourly Pricing:</label>
+                <input type="number" id="hourlyPricingWeekendInput"
+                    #hourlyPricingInput required />
+            </div>
+            <div class="form-group">
+                <label for="dailyPricingWeekendInput">Daily Pricing:</label>
+                <input type="number" id="dailyPricingWeekendInput"
+                    #dailyPricingInput required />
+            </div>
+            <div class="form-group">
+                <label for="minimumHoursWeekendInput">Minimum Hours:</label>
+                <input type="number" id="minimumHoursWeekendInput"
+                    #minimumHoursInput required />
+            </div>
+            <button (click)="onUpdateWeekend(hourlyPricingInput,
+                dailyPricingInput, minimumHoursInput)" class="updatebutton">Update</button>
+            <button (click)="onCancelWeekendUpdate()" class="cancelbutton">Cancel</button>
+        </div>
+    </div>
+</div>

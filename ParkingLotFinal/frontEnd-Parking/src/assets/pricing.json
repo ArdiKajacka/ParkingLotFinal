@@ -1,0 +1,18 @@
+{
+"pricing": [
+    {
+    "id": 1,
+    "hourlyPricing": 2,
+    "dailyPricing": 5,
+    "minimumHours": 3,
+    "type": 0
+  },
+  {
+    "id": 2,
+    "hourlyPricing": 4,
+    "dailyPricing": 10,
+    "minimumHours": 3,
+    "type": 1
+  }
+]
+}

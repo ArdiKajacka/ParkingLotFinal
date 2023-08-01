@@ -1,0 +1,55 @@
+.pricingHeader,
+.parkingSpots {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.chart-element {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.chart-element h3 {
+  margin-bottom: 1rem;
+}
+
+.chart-element .progress {
+  height: 2rem;
+  border-radius: 25px;
+}
+
+.chart-element .progress-bar {
+  border-radius: 25px;
+  background-color: green;
+  transition: width 2s ease-in; /* Adjust the transition duration as needed */
+}
+
+#firstProgress {
+  background-color: green;
+}
+
+#secondProgress {
+  background-color: red;
+}
+
+.spots-container {
+  height: 50%;
+}
+
+.spots-container {
+  font-size: x-large;
+  margin-top: 15%;
+}
+
+.spots-container h2 {
+  margin-bottom: 10%;
+}
+
+.spots-container .complain-button {
+  margin-top: 5%;
+}
+
+.progress-bar {
+  transition: width 2s ease; /* Adjust the transition duration as needed */
+}

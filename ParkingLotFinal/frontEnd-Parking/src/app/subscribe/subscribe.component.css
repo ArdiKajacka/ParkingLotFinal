@@ -1,0 +1,110 @@
+#LogIn,
+#Complain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh);
+  background: rgba(0, 0, 0, 0.65) url("../../assets/logInBackground.jpg");
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  margin-top: 2rem; /* Adjust the value to increase the spacing between the navbar and the card */
+  background-color: #f0f0f0;
+  box-shadow: 10px 10px 20px #cbced1, -10px -10px 20px #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 80%; /* Adjust the width as desired */
+  max-width: 400px; /* Set a maximum width to limit the card size */
+  margin-left: auto;
+  margin-right: auto;
+}
+.card h2 {
+  text-align: center;
+}
+
+.input-group {
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem;
+}
+
+.input-group-radio {
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem;
+  margin-bottom: 5px;
+}
+.radio-container {
+  margin-left: 1rem;
+  padding: 5px;
+}
+.input-group-radio input[type="radio"] {
+  margin: 2px;
+}
+.input-group-radio .label {
+  font-weight: bold;
+}
+
+.input-group label {
+  flex-basis: 30%; /* Adjust the width of the label as desired */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  flex-basis: 70%; /* Adjust the width of the input as desired */
+  padding: 10px;
+  border: 1px solid #cbced1;
+  border-radius: 5px;
+  font-size: 14px; /* Adjust the font size as desired */
+}
+
+.bottom-text {
+  word-wrap: break-word;
+  width: 100px;
+}
+
+.input-group input[type="submit"] {
+  flex-basis: 100%;
+  background: #f77d24;
+  color: white;
+  cursor: pointer;
+  left: 50%;
+  margin-left: 50px;
+}
+
+#submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  /* Adjust card margin-top for smaller screens */
+  .card {
+    margin-top: 2vh;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust card width for medium screens */
+  .card {
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjust card width and padding for smaller screens */
+  .card {
+    width: 90%;
+    padding: 10px;
+  }
+}
