@@ -21,6 +21,7 @@ namespace ParkingLot.Repositories
         {
             Logs logs = new Logs
             {
+                Code = GenerateUniqueRandomCode(),
                 SubscriptionId = logsDTO.SubscriptionId,
                 CheckIn = logsDTO.CheckIn,
                 CheckOut = logsDTO.CheckOut
@@ -129,6 +130,26 @@ namespace ParkingLot.Repositories
                 logs.CheckOut = newCheckOutTime;
                 _context.SaveChanges();
             }
+        }
+
+        private string GenerateUniqueRandomCode()
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            Random random = new Random();
+
+            // Generate a random alphanumeric code of length 6
+            string code = new string(Enumerable.Repeat(chars, 6)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+
+            // Check if the generated code already exists in the database.
+            // If it does, keep generating until a unique code is found.
+            while (_context.Logs.Any(log => log.Code == code))
+            {
+                code = new string(Enumerable.Repeat(chars, 6)
+                    .Select(s => s[random.Next(s.Length)]).ToArray());
+            }
+
+            return code;
         }
     }
 }

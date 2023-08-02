@@ -12,8 +12,8 @@ using ParkingLot.DbContexts;
 namespace ParkingLot.Migrations
 {
     [DbContext(typeof(ParkingContext))]
-    [Migration("20230731190643_updatesss")]
-    partial class updatesss
+    [Migration("20230802173842_chh")]
+    partial class chh
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,8 +39,8 @@ namespace ParkingLot.Migrations
                     b.Property<DateTime>("CheckOut")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("Code")
-                        .HasColumnType("integer");
+                    b.Property<string>("Code")
+                        .HasColumnType("text");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");

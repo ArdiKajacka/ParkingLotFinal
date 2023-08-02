@@ -36,8 +36,8 @@ namespace ParkingLot.Migrations
                     b.Property<DateTime>("CheckOut")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("Code")
-                        .HasColumnType("integer");
+                    b.Property<string>("Code")
+                        .HasColumnType("text");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
@@ -46,9 +46,7 @@ namespace ParkingLot.Migrations
                         .HasColumnType("decimal(18, 2)");
 
                     b.Property<int?>("SubscriptionId")
-                        .HasColumnType("integer")
-                        .IsRequired(false)
-                        .HasDefaultValue(null);
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

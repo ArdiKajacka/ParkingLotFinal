@@ -15,7 +15,7 @@ namespace ParkingLot.DataStore
 				new Logs()
 				{
 					Id = 1,
-					Code = 1,
+					Code = "1",
 					CheckIn = DateTime.Now,
 					CheckOut = DateTime.Now.AddHours(7),
 					IsDeleted = false,

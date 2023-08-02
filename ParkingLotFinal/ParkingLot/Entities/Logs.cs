@@ -8,7 +8,7 @@ namespace ParkingLot.Entities
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
-		public int Code { get; set; }  
+        public string? Code { get; set; }  
 		public int? SubscriptionId { get; set; }
 		public Subscriptions? Subscription { get; set; }
 
